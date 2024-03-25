@@ -3,7 +3,9 @@ import "./Logins.css"
 
 const Logins = () => {
   return<>
-    <div>Logins</div>
+    <div className='w-full h-screen flex justify-center items-center'>
+      
+    </div>
   </>
 }
 
