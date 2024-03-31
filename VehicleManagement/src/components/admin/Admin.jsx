@@ -7,7 +7,7 @@ import Footer from "./admin-sections/Footer";
 const Admin = () => {
   return (
     <>
-      <div className="flex h-screen">
+      <div className="flex h-full">
         <div className="bg-gray-900 w-64 ">
           <SideBar />
         </div>

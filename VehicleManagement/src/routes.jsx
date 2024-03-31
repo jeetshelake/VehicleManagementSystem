@@ -7,19 +7,21 @@ import Dashboard from "./components/admin/ContentType.jsx/Dashboard";
 import Vehicles from "./components/admin/ContentType.jsx/Vehicles";
 import VehicleType from "./components/admin/ContentType.jsx/VehicleType";
 import Drivers from "./components/admin/ContentType.jsx/Drivers";
+import DynamicDetails from "./components/admin/ContentType.jsx/DynamicDetails";
 const RouteNavigate = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to='/login'/>}></Route>
+        <Route path="/" element={<Navigate to="/login" />}></Route>
         <Route path="/login" element={<Logins />}></Route>
-        <Route path="/sign-up" element={<SignUp/>}></Route>
-        <Route path="admin-panel" element={<Admin/>}>
-        <Route index={true} element={<Navigate to ="dashboard"/>}></Route>
-          <Route path="dashboard" element={<Dashboard/>}></Route>
-          <Route path="vehicle" element={<Vehicles/>}></Route>
-          <Route path="vehicle-type" element={<VehicleType/>}></Route>
-          <Route path="drivers" element={<Drivers/>}></Route>
+        <Route path="/sign-up" element={<SignUp />}></Route>
+        <Route path="admin-panel" element={<Admin />}>
+          <Route index={true} element={<Navigate to="dashboard" />}></Route>
+          <Route path="dashboard" element={<Dashboard />}></Route>
+          <Route path="vehicle" element={<Vehicles />}></Route>
+          <Route path="vehicle/:id" element={<DynamicDetails/>}></Route>
+          <Route path="vehicle-type" element={<VehicleType />}></Route>
+          <Route path="drivers" element={<Drivers />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

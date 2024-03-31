@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import logo from "../../assets/mini-car.gif";
 import {useNavigate } from "react-router-dom";
 import axios from 'axios'
-import {useDispatch, useSelector } from "react-redux";
+import {useDispatch } from "react-redux";
 import { submit } from "../../store/slices/AuthSlice";
 const Logins = () => {
   const [data, setData] = useState([])
@@ -20,7 +20,7 @@ const Logins = () => {
         if(obj.email===handleEmail.current.value && obj.password===handlePassword.current.value){
           dispatch(submit(obj))
           return navigate('/admin-panel')
-        }   
+        }
         
     })
     
